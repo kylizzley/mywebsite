@@ -1,0 +1,47 @@
+<html>
+<head>
+<script language="JavaScript">
+var srcList = ["images/imgAnim/img0.png", 
+               "images/imgAnim/img1.png", 
+               "images/imgAnim/img2.png", 
+               "images/imgAnim/img3.png",  
+               "images/imgAnim/img4.png",  
+               "images/imgAnim/img5.png",  
+               "images/imgAnim/img6.png",  
+               "images/imgAnim/img7.png",];		   
+var index = 0;
+var loopCount = 0;
+
+
+function begin() 
+setTimeout("begin()", 1000);
+
+{
+
+index = index +1;
+document.getElementById("myPic").src = srcList[index];
+    index = index +1;
+// my list has 8 elements, so the last element is
+// at index 7
+if( index > 7) // larger than 7 will error.
+{
+    index = 0;
+}
+document.getElementById("myPic").src = srcList[index];
+
+
+}
+</script>
+</head>
+<body>
+<center>
+<h1>Fire Toad</h1>
+<img id="myPic" src="images/imgAnim/img0.png" width="600"/>
+
+<br/><br/>
+<input type="button" value="Start!" onclick="begin()">
+
+</center>
+</body>
+</html>
+
